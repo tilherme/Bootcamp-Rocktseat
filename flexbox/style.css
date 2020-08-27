@@ -1,0 +1,54 @@
+html, body, #app{
+    height: 100%;
+    margin: 0;
+}
+#app{
+    display: flex;/*sempre que quiser ultizar o flexbox usar.. display:flex*/
+    /*padrao do flex direction é row*/
+   /* flex-wrap:wrap; quebra a linha*/
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    /* space-betwern vai dar um espaçamento entre os itens */
+    /*space-araund vai dar um espaçamento no inicio e no final dos itens */
+}
+
+.box{
+    width: 60px;
+
+    height: 60px;
+     margin: 5px;
+     border-radius: 5.8rem;
+  
+    position: relative;
+    
+   
+}
+.red{
+      animation: load1 1s infinite;
+       background: #F00;
+       order: 3;
+}
+.green{
+    background: #0f1;
+     animation: load2 1s infinite;
+     order: 2;
+}
+.blue{
+     animation: load3 1s infinite;
+    background:  #00f;
+    order: 0;
+}
+@keyframes load1{
+50% {top:  184px;}
+100%{right: 136px;}
+
+}
+@keyframes load2{
+50% {left:80px;}
+100%{top: 0px;}
+}
+@keyframes load3{
+50% {top:0px;}
+100%{left:80px;}
+}
